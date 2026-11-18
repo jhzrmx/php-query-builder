@@ -11,5 +11,12 @@
         "psr-4": {
             "QueryBuilder\\": "src/"
         }
+    },
+    "scripts": {
+        "lint": "find src -type f -name '*.php' -print0 | xargs -0 -n1 php -l",
+        "check": [
+            "@composer validate --strict",
+            "@lint"
+        ]
     }
 }
